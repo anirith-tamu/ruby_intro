@@ -52,6 +52,16 @@ end
 
 def starts_with_consonant?(string)
   # YOUR CODE HERE
+  string = string.downcase
+  if string.empty? || !string.match(/^[a-z]/)
+    return false
+  end
+  vowels = ['a', 'e', 'i', 'o', 'u']
+  return !vowels.include?(string[0])
+  #AnotherMethod
+  #consonant_pattern = /^[b-df-hj-np-tv-z]/i
+  # Use the regular expression to check if the string starts with a consonant
+  #return !!(s =~ consonant_pattern)
 end
 
 def binary_multiple_of_4?(string)
