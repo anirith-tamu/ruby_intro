@@ -104,4 +104,8 @@ class BookInStock
     end
     @price = price_new
   end
+  def price_as_string
+    price_float = format("$%.2f", @price)
+    return price_float
+  end
 end
