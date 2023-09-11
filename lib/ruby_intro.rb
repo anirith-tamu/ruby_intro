@@ -12,7 +12,16 @@ def sum(arr)
 end
 
 def max_2_sum(arr)
-  # YOUR CODE HERE 
+  # YOUR CODE HERE
+  if arr.length==0
+    return 0
+  end
+  if arr.length==1
+    return arr[0]
+  end
+  arr_sorted=arr.sort.reverse
+  result = arr_sorted[0]+arr_sorted[1]
+  return result 
 end
 
 def sum_to_n?(arr, number)
