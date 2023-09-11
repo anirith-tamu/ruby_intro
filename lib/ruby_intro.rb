@@ -66,6 +66,15 @@ end
 
 def binary_multiple_of_4?(string)
   # YOUR CODE HERE
+   return false if string.empty?
+
+   return false unless string.match?(/\A[01]+\z/)
+
+   decimal_value = 0
+   string.each_char do |char|
+     decimal_value = decimal_value * 2 + char.to_i
+   end
+   return decimal_value % 4 == 0
 end
 
 # Part 3
