@@ -26,6 +26,20 @@ end
 
 def sum_to_n?(arr, number)
   # YOUR CODE HERE
+  arr.sort!
+  left = 0
+  right = arr.length - 1
+  while left < right
+    sum = arr[left] + arr[right]
+    if sum == number
+      return true
+    elsif sum < number
+      left += 1
+    else      
+      right -= 1
+    end
+  end
+  return false
 end
 
 # Part 2
