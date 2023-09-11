@@ -4,10 +4,15 @@
 
 def sum(arr)
   # YOUR CODE HERE
+  res=0
+  arr.each do |a|
+    res+=a
+  end
+  return res 
 end
 
 def max_2_sum(arr)
-  # YOUR CODE HERE
+  # YOUR CODE HERE 
 end
 
 def sum_to_n?(arr, number)
